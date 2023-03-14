@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import { Routes, Route } from 'react-router-dom';
+import Footer from './components/Footer';
+import Addiction from "./pages/Addiction"
+import Popularity from "./pages/Popularity"
+import AddictionCard from "./pages/AddictionCard"
+import Testinomial from "./pages/Testinomial"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Addiction />} exact>Addiciton</Route>
+        <Route path='/card' element={<AddictionCard />}>Card</Route>
+        <Route path='/popularity' element={<Popularity />}>Popularity</Route>
+        <Route path='/testimonial' element={<Testinomial />}>Testinomial</Route>
+      </Routes>
+      <Footer />
+     
+     <h1>Games Addictions</h1>
     </div>
   );
 }
