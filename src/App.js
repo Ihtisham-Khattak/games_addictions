@@ -18,9 +18,7 @@ function App() {
         <Route path='/testimonial' element={<Testinomial />}>Testinomial</Route>
       </Routes>
       <Footer />
-     
-     <h1>Games Addictions</h1>
-    </div>
+         </div>
   );
 }
 
